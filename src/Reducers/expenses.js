@@ -1,10 +1,19 @@
 
-const expenses = (state = [{
-name: 'something',
-    sum: 5000,
-    date: 12.12.2012
-
-}], action) => {
-
+const expenses = (state = [], action) => {
+switch (action.type){
+    case 'CHOOSE_OPTION':
+        return [
+            ...state,
+            {
+                name: action.name,
+                sum: action.sum,
+                date: action.date,
+                id
+            }
+        ]
 }
+return state
+}
+
+export default expenses
 
