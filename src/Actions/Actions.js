@@ -8,6 +8,11 @@ export const addExpense = (name, sum, date) => ({
     id: expenseId++
 })
 
+export const removeExpense = (id) => ({
+    type: 'REMOVE_EXPENSE',
+    id
+})
+
 export const setOptions = option => ({
     type: 'CHOOSE_OPTION',
     option
