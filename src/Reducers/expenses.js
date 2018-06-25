@@ -8,7 +8,7 @@ switch (action.type){
                 name: action.name,
                 sum: action.sum,
                 date: action.date,
-                id
+                id: action.id
             }
         ]
 }
