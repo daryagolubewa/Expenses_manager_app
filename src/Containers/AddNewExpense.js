@@ -32,9 +32,8 @@ const AddExpense = ({ dispatch }) => {
                             <FormGroup>
                                 <FormControl type='text' inputRef={node => sum = node} placeholder="Введите сумму"/>
                             </FormGroup>
-
                             <FormGroup>
-                                <FormControl type='text' inputRef={node => date = node} placeholder="Введите дату"/>
+                                    <FormControl type="date" inputRef={node => date = node} />
                             </FormGroup>
                             <FormGroup>
                                 <Button type="submit">

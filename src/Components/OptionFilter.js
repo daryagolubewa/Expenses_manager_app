@@ -1,4 +1,10 @@
 import React from 'react'
+import { setSorting } from '../Actions/Actions'
 
 
-const Options = ({date, sum})
+const Sortings = ({setSorting}) => (
+
+    <div>
+        <p> <input type='radio'/></p>
+    </div>
+)

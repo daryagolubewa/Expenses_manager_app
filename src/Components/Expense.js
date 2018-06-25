@@ -6,11 +6,8 @@ const Expense = ({name, sum, date}) => (
     <div>
         <Panel>
             <Panel.Body> {name} </Panel.Body>
-            <ListGroup>
-                <ListGroupItem> {sum} </ListGroupItem>
-                <ListGroupItem> {date} </ListGroupItem>
-            </ListGroup>
-            <button> Отправить </button>
+                <Panel.Body> {sum} </Panel.Body>
+                <Panel.Body> {date} </Panel.Body>
         </Panel>
 
     </div>

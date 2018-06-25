@@ -13,13 +13,13 @@ export const removeExpense = (id) => ({
     id
 })
 
-export const setOptions = option => ({
-    type: 'CHOOSE_OPTION',
-    option
+export const setSorting = (sorting) => ({
+    type: 'SET_SORTING',
+    sorting
 })
 
-export const Options = {
-    OPTION_DATE: 'OPTION_DATE',
-    OPTION_SUM: 'OPTION_SUM'
+export const SortingOptions = {
+    DATE: 'DATE',
+    SUM: 'SUM'
 
 }
