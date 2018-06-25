@@ -5,7 +5,7 @@ export const addExpense = (name, sum, date) => ({
     name,
     sum,
     date,
-    id: expenseId++
+    id: ++expenseId
 })
 
 export const removeExpense = (id) => ({

@@ -1,7 +1,7 @@
 
 const expenses = (state = [], action) => {
 switch (action.type){
-    case 'CHOOSE_OPTION':
+    case 'ADD_EXPENSE':
         return [
             ...state,
             {
@@ -16,4 +16,3 @@ return state
 }
 
 export default expenses
-

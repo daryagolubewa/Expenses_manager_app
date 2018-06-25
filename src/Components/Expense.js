@@ -5,9 +5,6 @@ import { Panel, ListGroup, ListGroupItem } from 'react-bootstrap'
 const Expense = ({name, sum, date}) => (
     <div>
         <Panel>
-            <Panel.Heading>
-                <Panel.Title componentClass="h3"> Options </Panel.Title>
-            </Panel.Heading>
             <Panel.Body> {name} </Panel.Body>
             <ListGroup>
                 <ListGroupItem> {sum} </ListGroupItem>
@@ -20,9 +17,11 @@ const Expense = ({name, sum, date}) => (
 )
 
 Expense.propTypes = {
-name: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
     sum: PropTypes.number.isRequired,
     date: PropTypes.number.isRequired
 }
 
 export default Expense
+
+
