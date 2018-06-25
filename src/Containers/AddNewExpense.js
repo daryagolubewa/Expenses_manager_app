@@ -4,7 +4,7 @@ import { addExpense } from "../Actions/Actions"
 import { FormControl, Button, FormGroup, Form, Row, Col, Panel } from 'react-bootstrap'
 
 const AddExpense = ({ dispatch }) => {
-    let title, userName, text
+    let name, sum, date
     return(
         <Row>
             <Col md={4}>
@@ -26,15 +26,15 @@ const AddExpense = ({ dispatch }) => {
 
                             <h3>Написать пост</h3>
                             <FormGroup>
-                                <FormControl componentClass="textarea"  type='textarea' inputRef={node => userName = node} placeholder="Введите описане"/>
+                                <FormControl componentClass="textarea"  type='textarea' inputRef={node => name = node} placeholder="Введите описание"/>
                             </FormGroup>
 
                             <FormGroup>
-                                <FormControl type='text' inputRef={node => title = node} placeholder="Введите сумму"/>
+                                <FormControl type='text' inputRef={node => sum = node} placeholder="Введите сумму"/>
                             </FormGroup>
 
                             <FormGroup>
-                                <FormControl type='text' inputRef={node => text = node} placeholder="Введите дату"/>
+                                <FormControl type='text' inputRef={node => date = node} placeholder="Введите дату"/>
                             </FormGroup>
                             <FormGroup>
                                 <Button type="submit">

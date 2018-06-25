@@ -4,7 +4,7 @@ import Expense from '../Components/Expense'
 import { Grid, Row, Col, Panel } from 'react-bootstrap'
 import {removeExpense} from '../Actions/Actions'
 
-const ExpensesList = ({ expenses, Edit, Remove}) => (
+const ExpensesList = ({ expenses, Edit, removeExpense}) => (
     <Row>
         <Col md={8}>
             {expenses.map(expense =>
