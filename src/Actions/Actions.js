@@ -21,5 +21,9 @@ export const setSorting = (sorting) => ({
 export const SortingOptions = {
     DATE: 'DATE',
     SUM: 'SUM'
-
 }
+
+export const setFilter = (filter) => ({
+    type: 'SET_FILTER',
+    filter
+})
