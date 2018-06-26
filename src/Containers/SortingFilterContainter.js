@@ -6,17 +6,14 @@ import { removeExpense } from '../Actions/Actions'
 const getChosenExpenses = (expenses, sorting) => {
     switch (sorting) {
         case SortingOptions.DATE:
-            return expenses.sort((a, b) => {
-                if (a.date > b.date) return 1;
-                else return -1;
-            });
+            return expenses.slice().sort(
+                (a, b) => (a.date - b.date)
+            );
         case SortingOptions.SUM:
-            return expenses.sort((a, b) => {
-                if (a.sum > b.sum) return 1;
-                else return -1;
-            });
+            return expenses.slice().sort(
+                (a, b) => (a.sum - b.sum)
+            );
     }
-
 }
 
 const mapStateToProps = state => ({
