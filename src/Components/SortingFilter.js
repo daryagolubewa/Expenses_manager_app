@@ -5,8 +5,8 @@ import {SortingOptions} from '../Actions/Actions'
 const Sortings = ({setSorting}) => (
 
     <div>
-        <p> <input type='radio' checked onChange={setSorting(SortingOptions.DATE)} name='option'/> Дата </p>
-        <p> <input type='radio'  onChange={setSorting(SortingOptions.SUM)} name='option'/> Сумма </p>
+        <p> <input type='radio' checked onClick={setSorting(SortingOptions.DATE)} name='option'/> Дата </p>
+        <p> <input type='radio'  onClick={setSorting(SortingOptions.SUM)} name='option'/> Сумма </p>
     </div>
 )
 
