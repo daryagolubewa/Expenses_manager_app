@@ -1,5 +1,7 @@
 
-const expenses = (state = [], action) => {
+const expenses = (state = [
+
+], action) => {
 switch (action.type){
     case 'ADD_EXPENSE':
         return [
