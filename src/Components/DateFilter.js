@@ -1,6 +1,7 @@
 import React from 'react'
+import { setFilter } from '../Actions/Actions'
 
-const DateFilter = ({ }) => (
+const DateFilter = ({filter}) => (
     <div>
     <fieldset>
         <legend>Выберите диапазон дат</legend>

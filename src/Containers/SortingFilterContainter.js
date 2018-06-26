@@ -1,6 +1,7 @@
 import { connect } from 'react-redux'
 import ExpensesList from '../Components/ExpensesList'
 import { SortingOptions } from '../Actions/Actions'
+import { removeExpense } from '../Actions/Actions'
 
 const getChosenExpenses = (expenses, sorting) => {
     switch (sorting) {
@@ -22,8 +23,13 @@ const mapStateToProps = state => ({
     expenses: getChosenExpenses(state.expenses, state.sortings)
 })
 
+const mapDispatchToProps = dispatch => ({
+    removeExpense: id => dispatch(removeExpense(id))
+})
+
 export default connect(
-    mapStateToProps
+    mapStateToProps,
+    mapDispatchToProps
 )(ExpensesList)
 
 

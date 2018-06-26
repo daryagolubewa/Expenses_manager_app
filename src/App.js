@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import AddNewExpense from './Containers/AddNewExpense'
-import AddExpensesList from './Containers/AddExpensesList'
 import SortingFilterContainer from './Containers/SortingFilterContainter'
 import SortingButtons from './Containers/SortingButtons'
 import './App.css';
@@ -11,7 +10,6 @@ class App extends Component {
     return (
         <Grid>
             <AddNewExpense/>
-            <AddExpensesList/>
             <SortingButtons/>
             <SortingFilterContainer/>
         </Grid>
