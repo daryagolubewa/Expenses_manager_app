@@ -17,11 +17,7 @@ const getChosenExpenses = (expenses, sorting) => {
     }
 }
 
-const Filter = (filter) => {
-    expenses.filter(chosenDate => {
-        return chosenDate.date <= start.value || chosenDate.date >= end.value
-    })
-}
+
 
 const mapStateToProps = state => ({
     expenses: getChosenExpenses(state.expenses, state.sortings)
