@@ -23,7 +23,13 @@ const DateFilter = ({filter, setFilter}) => {
             if (!start.value.trim() || !end.value.trim()) {
                 return
             }
-            setFilter(start.value, end.value)
+            let startDate = new Date(start.value);
+            let endDate = new Date(end.value);
+
+            setFilter({
+                start: startDate.getTime(),
+                end: endDate.getTime()
+            })
 
         }}
         >Сохранить</button>
