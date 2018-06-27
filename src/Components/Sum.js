@@ -9,3 +9,5 @@ const Sum = ({totalSum}) => (
 )
 
 export default Sum
+
+
