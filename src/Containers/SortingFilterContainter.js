@@ -22,7 +22,7 @@ const getChosenExpenses = (expenses, sorting) => {
 
 const Filter = (expenses, filter) => {
     if( filter) {
-        expenses.filter(expense => expense.date <= filter.start || expense.date >= filter.end)
+        return expenses.filter(expense => expense.date >= filter.start && expense.date <= filter.end)
     } else {
         return expenses
     }
@@ -38,7 +38,7 @@ const Filter = (expenses, filter) => {
 }
 
 const mapStateToProps = state => ({
-    expenses: Filter(getChosenExpenses(state.expenses, state.sortings), state.filter)
+    expenses: Filter(getChosenExpenses(state.expenses, state.sortings), state.dateFilter)
 })
 
 const mapDispatchToProps = dispatch => ({
