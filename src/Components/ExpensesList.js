@@ -5,8 +5,13 @@ import { Grid, Row, Col, Panel } from 'react-bootstrap'
 
 
 const ExpensesList = ({ expenses, Edit, removeExpense}) => (
+    <Grid>
     <Row>
         <Col md={8}>
+            <Panel>
+                <Panel.Heading>
+                    <Panel.Title>Список расходов</Panel.Title>
+                </Panel.Heading>
             {expenses.map(expense =>
                 <Expense
                     key={expense.id}
@@ -16,8 +21,10 @@ const ExpensesList = ({ expenses, Edit, removeExpense}) => (
 
                 />
             )}
+            </Panel>
         </Col>
     </Row>
+    </Grid>
 )
 
 

@@ -1,11 +1,12 @@
 import React from 'react'
 import { connect } from "react-redux"
 import { addExpense } from "../Actions/Actions"
-import { FormControl, Button, FormGroup, Form, Row, Col, Panel } from 'react-bootstrap'
+import { FormControl, Button, FormGroup, Form, Grid, Row, Col, Panel } from 'react-bootstrap'
 
 const AddExpense = ({ dispatch }) => {
     let name, sum, date
     return(
+        <Grid>
         <Row>
             <Col md={4}>
                 <Panel bsStyle='primary'>
@@ -45,6 +46,7 @@ const AddExpense = ({ dispatch }) => {
                 </Panel>
             </Col>
         </Row>
+        </Grid>
     )
 }
 

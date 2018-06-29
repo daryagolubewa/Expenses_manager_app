@@ -10,13 +10,13 @@ import { Grid } from 'react-bootstrap'
 class App extends Component {
   render() {
     return (
-        <Grid>
+        <div>
             <AddNewExpense/>
             <AddDateFilter/>
             <SortingButtons/>
             <SortingFilterContainer/>
             <GetSum />
-        </Grid>
+        </div>
 
     );
   }
