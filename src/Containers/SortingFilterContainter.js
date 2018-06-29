@@ -21,20 +21,11 @@ const getChosenExpenses = (expenses, sorting) => {
 }
 
 const Filter = (expenses, filter) => {
-    if( filter) {
+    if (filter) {
         return expenses.filter(expense => expense.date >= filter.start && expense.date <= filter.end)
     } else {
         return expenses
     }
-
-
-    /*expenses.filter(chosenDate => {
-        if( state !== null) {
-            return chosenDate.date <= start || chosenDate.date >= end
-        } else {
-            return state
-        }
-    })*/
 }
 
 const mapStateToProps = state => ({

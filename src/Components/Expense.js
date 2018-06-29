@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Grid, Row, Col, Panel, ListGroup, ListGroupItem } from 'react-bootstrap'
 
-const Expense = ({name, sum, date}) => {
+const Expense = ({name, sum, date, editButton, removeButton}) => {
     let dateObject = new Date(date);
     return (
         <Grid>
@@ -12,6 +12,7 @@ const Expense = ({name, sum, date}) => {
                 <Panel.Body> {name} </Panel.Body>
                 <Panel.Body> {sum} </Panel.Body>
                 <Panel.Body> {dateObject.getDate()}.{(dateObject.getMonth() +1)}.{dateObject.getFullYear()} </Panel.Body>
+                <ChangingButtons editButton={editButton} removeButton={removeButton}/>
             </Panel>
                 </Col>
             </Row>

@@ -17,6 +17,11 @@ switch (action.type){
                 id: action.id
             }
         ]
+    case 'REMOVE_EXPENSE':
+        return state.filter(expense =>
+            (expense.id !== action.id)
+        )
+
 }
 return state
 }
