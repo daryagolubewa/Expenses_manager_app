@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Grid, Row, Col, Panel, ListGroup, ListGroupItem } from 'react-bootstrap'
+import ChangingButtons from '../Components/ChangigButtons'
 
 const Expense = ({name, sum, date, editButton, removeButton}) => {
     let dateObject = new Date(date);
