@@ -1,14 +1,28 @@
 import React from 'react'
 import { setSorting } from '../Actions/Actions'
 import {SortingOptions} from '../Actions/Actions'
+import {Grid, Row, Col, Panel, ListGroup, ListGroupItem} from 'react-bootstrap'
 
 const Sortings = ({setSorting}) => (
 
-    <div>
-        <h3>Отсортировать по:</h3>
-        <p> <input type='radio' defaultChecked onClick={() => setSorting(SortingOptions.DATE)} name='option'/> Дате </p>
-        <p> <input type='radio'  onClick={() => setSorting(SortingOptions.SUM)} name='option'/> Сумме </p>
-    </div>
+    <Grid>
+        <Row>
+            <Col md={4}>
+                <Panel bsStyle='info'>
+                    <Panel.Heading>
+                        <Panel.Title>Отсортировать по:</Panel.Title>
+                    </Panel.Heading>
+                    <ListGroup>
+                        <ListGroupItem> <input type='radio' defaultChecked
+                                               onClick={() => setSorting(SortingOptions.DATE)} name='option'/> Дате
+                        </ListGroupItem>
+                        <ListGroupItem> <input type='radio' onClick={() => setSorting(SortingOptions.SUM)}
+                                               name='option'/> Сумме </ListGroupItem>
+                    </ListGroup>
+                </Panel>
+            </Col>
+        </Row>
+    </Grid>
 )
 
 export default Sortings

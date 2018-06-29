@@ -1,11 +1,17 @@
 import React from 'react'
-import {Panel} from 'react-bootstrap'
+import {Grid, Row, Col, Panel} from 'react-bootstrap'
 
 const Sum = ({totalSum}) => (
-    <Panel>
-        <Panel.Heading>Общая сумма</Panel.Heading>
-        <Panel.Body> {totalSum} </Panel.Body>
-    </Panel>
+    <Grid>
+        <Row>
+            <Col md={4}>
+                <Panel bsStyle='success'>
+                    <Panel.Heading>Общая сумма</Panel.Heading>
+                    <Panel.Body> {totalSum} рублей </Panel.Body>
+                </Panel>
+            </Col>
+        </Row>
+    </Grid>
 )
 
 export default Sum

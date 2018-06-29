@@ -1,39 +1,53 @@
 import React from 'react'
 import { setFilter } from '../Actions/Actions'
+import {Grid, Row, Col, Panel, ListGroup, ListGroupItem, Button, FormGroup, FormControl} from 'react-bootstrap'
 
 const DateFilter = ({filter, setFilter}) => {
     let start, end
     return (
-    <div>
-        <fieldset>
-            <legend>Выберите диапазон дат</legend>
+        <Grid>
+            <Row>
+                <Col md={4}>
+                    <Panel bsStyle='info'>
+                        <Panel.Heading>
+                            <Panel.Title>Выберите диапазон дат</Panel.Title>
+                        </Panel.Heading>
+                        <ListGroup>
+                            <ListGroupItem>
+                                <label for="start">Начало</label>
+                                <FormGroup>
+                                <FormControl type="date" inputRef={node => start = node}/>
+                                </FormGroup>
+                            </ListGroupItem>
 
-            <div>
-                <label for="start">Начало</label>
-                <input type="date" ref={node => start = node}/>
-            </div>
+                            <ListGroupItem>
+                                <label for="end">Конец</label>
+                                <FormGroup>
+                                <FormControl type="date" inputRef={node => end = node}/>
+                                </FormGroup>
+                            </ListGroupItem>
+                        </ListGroup>
 
-            <div>
-                <label for="end">Конец</label>
-                <input type="date" ref={node => end = node}/>
-            </div>
 
-        </fieldset>
-        <button onClick={() => {
-            if (!start.value.trim() || !end.value.trim()) {
-                return
-            }
-            let startDate = new Date(start.value);
-            let endDate = new Date(end.value);
+                        <Button onClick={() => {
+                            if (!start.value.trim() || !end.value.trim()) {
+                                return
+                            }
+                            let startDate = new Date(start.value);
+                            let endDate = new Date(end.value);
 
-            setFilter({
-                start: startDate.getTime(),
-                end: endDate.getTime()
-            })
+                            setFilter({
+                                start: startDate.getTime(),
+                                end: endDate.getTime()
+                            })
 
-        }}
-        >Сохранить</button>
-    </div>
+                        }}
+                        >Сохранить
+                        </Button>
+                    </Panel>
+                </Col>
+            </Row>
+        </Grid>
     )
 }
 

@@ -8,11 +8,13 @@ const Expense = ({name, sum, date, editButton, removeButton}) => {
     return (
         <Grid>
             <Row>
-                <Col>
+                <Col md={4}>
             <Panel>
-                <Panel.Body> {name} </Panel.Body>
-                <Panel.Body> {sum} </Panel.Body>
-                <Panel.Body> {dateObject.getDate()}.{(dateObject.getMonth() +1)}.{dateObject.getFullYear()} </Panel.Body>
+                <ListGroup>
+                <ListGroupItem> {name} </ListGroupItem>
+                <ListGroupItem> {sum} рублей </ListGroupItem>
+                <ListGroupItem> {dateObject.getDate()}/{(dateObject.getMonth() +1)}/{dateObject.getFullYear()} </ListGroupItem>
+                </ListGroup>
                 <ChangingButtons editButton={editButton} removeButton={removeButton}/>
             </Panel>
                 </Col>
@@ -28,5 +30,4 @@ Expense.propTypes = {
 }
 
 export default Expense
-
 

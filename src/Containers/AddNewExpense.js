@@ -25,7 +25,9 @@ const AddExpense = ({ dispatch }) => {
                               }}
                         >
 
-                            <h3>Внести расходы</h3>
+                            <Panel.Heading>
+                                <Panel.Title>Внести расходы</Panel.Title>
+                            </Panel.Heading>
                             <FormGroup>
                                 <FormControl componentClass="textarea"  type='textarea' inputRef={node => name = node} placeholder="Введите описание"/>
                             </FormGroup>

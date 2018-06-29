@@ -5,18 +5,30 @@ import SortingFilterContainer from './Containers/SortingFilterContainter'
 import SortingButtons from './Containers/SortingButtons'
 import GetSum from './Containers/GetSum'
 import './App.css';
-import { Grid } from 'react-bootstrap'
+import { Grid, Row, Col } from 'react-bootstrap'
 
 class App extends Component {
   render() {
     return (
-        <div>
-            <AddNewExpense/>
-            <AddDateFilter/>
-            <SortingButtons/>
-            <SortingFilterContainer/>
-            <GetSum />
-        </div>
+        <Grid>
+            <Row>
+                <Col>
+                    <AddNewExpense/>
+                </Col>
+                <Col>
+                    <SortingButtons/>
+                </Col>
+                <Col>
+                    <AddDateFilter/>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                <SortingFilterContainer/>
+                <GetSum/>
+            </Col>
+            </Row>
+        </Grid>
 
     );
   }

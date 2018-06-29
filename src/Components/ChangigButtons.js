@@ -8,8 +8,8 @@ const ChangingButtons = ({editButton, removeButton}) => (
         <Row>
             <Col>
                 <div>
-                    <Link to='/edit/:id'><Button>Редактировать</Button></Link>
-                    <Button onClick={removeButton}>Удалить</Button>
+                    <Link to='/edit/:id'><Button bsStyle='success'>Редактировать</Button></Link>
+                    <Button bsStyle='danger' onClick={removeButton}>Удалить</Button>
                 </div>
             </Col>
         </Row>
