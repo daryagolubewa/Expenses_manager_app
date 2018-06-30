@@ -7,32 +7,21 @@ import GetSum from './Containers/GetSum'
 import EditExpense from './Containers/EditExpense'
 import './App.css';
 import { Grid, Row, Col } from 'react-bootstrap'
+import {Route } from 'react-router-dom'
 
 class App extends Component {
   render() {
     return (
         <Grid>
             <Row md={9}>
-                <Col md={4}>
-                    <AddNewExpense/>
-                </Col>
-                <Col md={4}>
-                    <SortingButtons/>
-                </Col>
-                <Col md={4}>
-                    <AddDateFilter/>
-                </Col>
+                    <Route path='/add' component={AddNewExpense}/>
+                    <Route path='/' exact={true} component={SortingButtons}/>
+                    <Route path='/' exact={true} component={AddDateFilter}/>
             </Row>
             <Row>
-                <Col md={4}>
-                <SortingFilterContainer/>
-                </Col>
-                <Col md={4}>
-                <GetSum/>
-            </Col>
-                <Col md={4}>
-                    <EditExpense/>
-                </Col>
+                <Route path='/' exact={true} component={SortingFilterContainer}/>
+                <Route path='/' exact={true} component={GetSum}/>
+                <Route path='/edit/:id'  component={EditExpense}/>
             </Row>
         </Grid>
 
@@ -41,3 +30,4 @@ class App extends Component {
 }
 
 export default App;
+

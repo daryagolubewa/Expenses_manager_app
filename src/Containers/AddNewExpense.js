@@ -1,12 +1,13 @@
 import React from 'react'
 import { connect } from "react-redux"
 import { addExpense } from "../Actions/Actions"
-import { FormControl, Button, FormGroup, Form, Grid, Row, Col, Panel } from 'react-bootstrap'
+import { FormControl, Button, FormGroup, Form, Col, Panel } from 'react-bootstrap'
+import { Route } from 'react-router-dom'
 
 const AddExpense = ({ dispatch }) => {
     let name, sum, date
     return(
-
+        <Col md={4}>
                 <Panel bsStyle='primary'>
                     <Panel.Body>
                         <Form horizontal
@@ -37,15 +38,22 @@ const AddExpense = ({ dispatch }) => {
                                     <FormControl type="date" inputRef={node => date = node} />
                             </FormGroup>
                             <FormGroup>
-                                <Button type="submit">
-                                    Отправить
-                                </Button>
+                                <Route render={({ history}) => (
+                                    <Button
+                                        type='submit'
+                                        onClick={() => { history.push('/') }}
+                                    >
+                                        Отправить
+                                    </Button>
+                                )} />
                             </FormGroup>
                         </Form>
                     </Panel.Body>
                 </Panel>
+        </Col>
 
     )
 }
 
 export default connect()(AddExpense)
+

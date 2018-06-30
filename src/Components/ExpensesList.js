@@ -5,21 +5,24 @@ import { Grid, Row, Col, Panel } from 'react-bootstrap'
 
 
 const ExpensesList = ({expenses, Edit, removeExpense}) => (
-    <Panel bsStyle='info'>
-        <Panel.Heading>
-            <Panel.Title>Список расходов</Panel.Title>
-        </Panel.Heading>
-        {expenses.map(expense =>
-            <Expense
-                key={expense.id}
-                {...expense}
+    <Col md={4}>
+        <Panel bsStyle='info'>
+            <Panel.Heading>
+                <Panel.Title>Список расходов</Panel.Title>
+            </Panel.Heading>
+            {expenses.map(expense =>
+                <Expense
+                    key={expense.id}
+                    {...expense}
 
-                removeButton={() => removeExpense(expense.id)}
+                    removeButton={() => removeExpense(expense.id)}
 
-            />
-        )}
-    </Panel>
+                />
+            )}
+        </Panel>
+    </Col>
 )
+
 
 
 export default ExpensesList

@@ -22,7 +22,7 @@ const Expense = ({name, sum, date, editButton, removeButton}) => {
 Expense.propTypes = {
     name: PropTypes.string.isRequired,
     sum: PropTypes.number.isRequired,
-    date: PropTypes.string.isRequired
+    date: PropTypes.number.isRequired
 }
 
 export default Expense

@@ -16,9 +16,6 @@ const ChangingButtons = ({editButton, removeButton}) => (
     </Grid>
 )
 
-ChangingButtons.propTypes = {
-    editButton: PropTypes.func.isRequired,
-    removeButton: PropTypes.func.isRequired
-}
+
 
 export default ChangingButtons
