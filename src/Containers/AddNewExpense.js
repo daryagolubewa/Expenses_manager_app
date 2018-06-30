@@ -6,9 +6,7 @@ import { FormControl, Button, FormGroup, Form, Grid, Row, Col, Panel } from 'rea
 const AddExpense = ({ dispatch }) => {
     let name, sum, date
     return(
-        <Grid>
-        <Row>
-            <Col md={4}>
+
                 <Panel bsStyle='primary'>
                     <Panel.Body>
                         <Form horizontal
@@ -46,9 +44,7 @@ const AddExpense = ({ dispatch }) => {
                         </Form>
                     </Panel.Body>
                 </Panel>
-            </Col>
-        </Row>
-        </Grid>
+
     )
 }
 

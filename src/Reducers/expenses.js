@@ -21,9 +21,22 @@ switch (action.type){
         return state.filter(expense =>
             (expense.id !== action.id)
         )
-
+    case 'EDIT_EXPENSE':
+        let newDateObject = new Date(action.date);
+        return {
+            state: state.map(
+                expense => expense.id === action.id ?      {
+                        name: action.name,
+                        sum: parseInt(action.sum),
+                        date: newDateObject.getTime(),
+                        id: action.id
+                    }
+                    : expense
+            )
+        }
 }
 return state
 }
 
 export default expenses
+

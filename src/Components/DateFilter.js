@@ -5,9 +5,7 @@ import {Grid, Row, Col, Panel, ListGroup, ListGroupItem, Button, FormGroup, Form
 const DateFilter = ({filter, setFilter}) => {
     let start, end
     return (
-        <Grid>
-            <Row>
-                <Col md={4}>
+
                     <Panel bsStyle='info'>
                         <Panel.Heading>
                             <Panel.Title>Выберите диапазон дат</Panel.Title>
@@ -45,9 +43,7 @@ const DateFilter = ({filter, setFilter}) => {
                         >Сохранить
                         </Button>
                     </Panel>
-                </Col>
-            </Row>
-        </Grid>
+
     )
 }
 

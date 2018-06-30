@@ -6,9 +6,7 @@ import ChangingButtons from '../Components/ChangigButtons'
 const Expense = ({name, sum, date, editButton, removeButton}) => {
     let dateObject = new Date(date);
     return (
-        <Grid>
-            <Row>
-                <Col md={4}>
+
             <Panel>
                 <ListGroup>
                 <ListGroupItem> {name} </ListGroupItem>
@@ -17,9 +15,7 @@ const Expense = ({name, sum, date, editButton, removeButton}) => {
                 </ListGroup>
                 <ChangingButtons editButton={editButton} removeButton={removeButton}/>
             </Panel>
-                </Col>
-            </Row>
-        </Grid>
+
     )
 }
 
