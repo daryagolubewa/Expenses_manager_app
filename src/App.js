@@ -14,7 +14,7 @@ class App extends Component {
   render() {
     return (
         <Grid>
-            <Row md={9}>
+            <Row xs={12} md={9}>
                 <Route path='/add' component={AddNewExpense}/>
                 <Route path='/' exact={true} component={SortingButtons}/>
                 <Route path='/' exact={true} component={AddDateFilter}/>

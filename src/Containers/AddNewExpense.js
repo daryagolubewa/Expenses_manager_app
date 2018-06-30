@@ -7,7 +7,7 @@ import { Route } from 'react-router-dom'
 const AddExpense = ({ dispatch }) => {
     let name, sum, date
     return(
-        <Col md={4}>
+        <Col xs={6} md={4}>
                 <Panel bsStyle='primary'>
                     <Panel.Body>
                         <Form horizontal

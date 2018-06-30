@@ -4,7 +4,7 @@ import {SortingOptions} from '../Actions/Actions'
 import {Grid, Row, Col, Panel, ListGroup, ListGroupItem} from 'react-bootstrap'
 
 const Sortings = ({setSorting}) => (
-    <Col md={4}>
+    <Col xs={6} md={4}>
     <Panel bsStyle='info'>
         <Panel.Heading>
             <Panel.Title>Отсортировать по:</Panel.Title>

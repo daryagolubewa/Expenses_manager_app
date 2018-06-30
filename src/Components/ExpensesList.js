@@ -5,7 +5,7 @@ import { Grid, Row, Col, Panel } from 'react-bootstrap'
 
 
 const ExpensesList = ({expenses, removeExpense}) => (
-    <Col md={4}>
+    <Col xs={6} md={4}>
         <Panel bsStyle='info'>
             <Panel.Heading>
                 <Panel.Title>Список расходов</Panel.Title>

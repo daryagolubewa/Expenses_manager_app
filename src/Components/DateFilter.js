@@ -2,10 +2,12 @@ import React from 'react'
 import { setFilter } from '../Actions/Actions'
 import {Grid, Row, Col, Panel, ListGroup, ListGroupItem, Button, FormGroup, FormControl} from 'react-bootstrap'
 
+
+
 const DateFilter = ({filter, setFilter}) => {
     let start, end
     return (
-        <Col md={4}>
+        <Col xs={6} md={4}>
             <Panel bsStyle='info'>
                 <Panel.Heading>
                     <Panel.Title>Выберите диапазон дат</Panel.Title>
@@ -14,14 +16,14 @@ const DateFilter = ({filter, setFilter}) => {
                     <ListGroupItem>
                         <label for="start">Начало</label>
                         <FormGroup>
-                            <FormControl type="date" inputRef={node => start = node}/>
+                            <FormControl type="date" inputRef={node => start = node} className="date" />
                         </FormGroup>
                     </ListGroupItem>
 
                     <ListGroupItem>
                         <label for="end">Конец</label>
                         <FormGroup>
-                            <FormControl type="date" inputRef={node => end = node}/>
+                            <FormControl type="date" inputRef={node => end = node} className="date" />
                         </FormGroup>
                     </ListGroupItem>
                 </ListGroup>

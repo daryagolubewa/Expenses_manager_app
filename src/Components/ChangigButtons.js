@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const ChangingButtons = ({editButton, removeButton}) => (
     <Grid>
         <Row>
-            <Col>
+            <Col xs={6} md={4}>
                 <div>
                     <Link to='/edit/:id'><Button bsStyle='success'>Редактировать</Button></Link>
                     <Button bsStyle='danger' onClick={removeButton}>Удалить</Button>
