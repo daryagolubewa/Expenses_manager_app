@@ -4,7 +4,7 @@ import Expense from '../Components/Expense'
 import { Grid, Row, Col, Panel } from 'react-bootstrap'
 
 
-const ExpensesList = ({expenses, Edit, removeExpense}) => (
+const ExpensesList = ({expenses, removeExpense}) => (
     <Col md={4}>
         <Panel bsStyle='info'>
             <Panel.Heading>

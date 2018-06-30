@@ -1,14 +1,19 @@
 import React from 'react'
-import {Col, Button} from 'react-bootstrap'
+import { Link } from 'react-router-dom'
+import { Button} from 'react-bootstrap'
+import PropTypes from 'prop-types'
 
 
 const ExpenseButton = ({addNewExpense}) => (
-    <Button onClick={addNewExpense}> Добавить расходы </Button>
+    <Link to='/add'><Button onClick={addNewExpense} bsStyle='info' bsSize='large'> Добавить расходы </Button></Link>
 )
+
 
 export default ExpenseButton
 
-
+ExpenseButton.propTypes = {
+    ExpenseButton: PropTypes.func.isRequired
+}
 
 
 
