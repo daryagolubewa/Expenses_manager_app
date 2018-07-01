@@ -1,20 +1,20 @@
+import { v4 } from 'node-uuid'
 
-let expenseId = 0;
 export const addExpense = (name, sum, date) => ({
     type: 'ADD_EXPENSE',
     name,
     sum,
     date,
-    id: ++expenseId
+    id: v4()
 })
 
-let editExpenseId = 0;
+
 export const editExpense = (name, sum, date, id) => ({
     type: 'EDIT_EXPENSE',
     name,
     sum,
     date,
-    id: ++editExpenseId
+    id
 })
 
 export const removeExpense = (id) => ({

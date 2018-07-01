@@ -23,7 +23,7 @@ class App extends Component {
             <Row>
                 <Route path='/' exact={true} component={SortingFilterContainer}/>
                 <Route path='/' exact={true} component={GetSum}/>
-                <Route path='/edit/:id' component={EditExpense}/>
+                <Route path='/edit/:id' render={(props) => <EditExpense{...props} />}/>
             </Row>
         </Grid>
 

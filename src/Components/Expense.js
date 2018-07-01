@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Grid, Row, Col, Panel, ListGroup, ListGroupItem } from 'react-bootstrap'
 import ChangingButtons from '../Components/ChangigButtons'
 
-const Expense = ({name, sum, date, editButton, removeButton}) => {
+const Expense = ({name, sum, date, id, editButton, removeButton}) => {
     let dateObject = new Date(date);
     return (
 
@@ -13,7 +13,7 @@ const Expense = ({name, sum, date, editButton, removeButton}) => {
                 <ListGroupItem> {sum} рублей </ListGroupItem>
                 <ListGroupItem> {dateObject.getDate()}/{(dateObject.getMonth() +1)}/{dateObject.getFullYear()} </ListGroupItem>
                 </ListGroup>
-                <ChangingButtons editButton={editButton} removeButton={removeButton}/>
+                <ChangingButtons expenseId={id} editButton={editButton} removeButton={removeButton}/>
             </Panel>
 
     )

@@ -3,7 +3,7 @@ import { connect } from "react-redux"
 import { editExpense } from "../Actions/Actions"
 import { FormControl, Button, FormGroup, Form, Panel } from 'react-bootstrap'
 import { Col } from 'react-bootstrap'
-import {Route} from 'react-router-dom'
+
 
 const EditExpense = ({ dispatch, history }) => {
     let name, sum, date
@@ -20,9 +20,6 @@ const EditExpense = ({ dispatch, history }) => {
 
                               dispatch(editExpense(name.value, sum.value, date.value))
                               history.push('/')
-                              name.value = '';
-                              sum.value = '';
-                              date.value = '';
                           }}
                     >
 
