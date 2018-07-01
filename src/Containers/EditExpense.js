@@ -7,6 +7,7 @@ import { Col } from 'react-bootstrap'
 
 const EditExpense = ({ dispatch, history, match, name, sum, date}) => {
     let expenseName, expenseSum, expenseDate
+    let dateObject = new Date(date)
     return(
         <Col md={4}>
             <Panel bsStyle='info' className='add'>
@@ -34,7 +35,7 @@ const EditExpense = ({ dispatch, history, match, name, sum, date}) => {
                             <FormControl type='text' inputRef={node => expenseSum = node}  defaultValue={sum}/>
                         </FormGroup>
                         <FormGroup>
-                            <FormControl type="date" inputRef={node => expenseDate = node}  defaultValue={date}/>
+                            <FormControl type="date" inputRef={node => expenseDate = node}  defaultValue={dateObject.toISOString().slice(0,10)}/>
                         </FormGroup>
                         <FormGroup>
                                 <Button
@@ -50,5 +51,14 @@ const EditExpense = ({ dispatch, history, match, name, sum, date}) => {
     )
 }
 
-export default connect()(EditExpense)
+const mapStateToProps = (state, match) => ({
+    ...state.expenses.find(expense => {
+            return match.match.params.id === expense.id.toString()
+        }
+    )
+})
+
+export default connect(
+    mapStateToProps
+)(EditExpense)
 
