@@ -8,7 +8,7 @@ const DateFilter = ({filter, setFilter}) => {
     let start, end
     return (
         <Col xs={6} md={4}>
-            <Panel bsStyle='info'>
+            <Panel bsStyle='info' className='header'>
                 <Panel.Heading>
                     <Panel.Title>Выберите диапазон дат</Panel.Title>
                 </Panel.Heading>

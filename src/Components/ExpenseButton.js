@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 
 
 const ExpenseButton = ({addNewExpense}) => (
-    <Link to='/add'><Button onClick={addNewExpense} bsStyle='info' bsSize='large' style={{margin: 10}}> Добавить расходы </Button></Link>
+    <Link to='/add'><Button onClick={addNewExpense} bsStyle='info' bsSize='large' className='expenseButton'> Добавить расходы </Button></Link>
 )
 
 

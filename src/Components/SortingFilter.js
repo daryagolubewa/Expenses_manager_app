@@ -5,7 +5,7 @@ import {Grid, Row, Col, Panel, ListGroup, ListGroupItem} from 'react-bootstrap'
 
 const Sortings = ({setSorting}) => (
     <Col xs={6} md={4}>
-    <Panel bsStyle='info'>
+    <Panel bsStyle='info' className='header'>
         <Panel.Heading>
             <Panel.Title>Отсортировать по:</Panel.Title>
         </Panel.Heading>
