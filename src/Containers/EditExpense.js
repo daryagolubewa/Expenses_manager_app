@@ -5,37 +5,36 @@ import { FormControl, Button, FormGroup, Form, Panel } from 'react-bootstrap'
 import { Col } from 'react-bootstrap'
 
 
-const EditExpense = ({ dispatch, history }) => {
-    let name, sum, date
+const EditExpense = ({ dispatch, history, match, name, sum, date}) => {
+    let expenseName, expenseSum, expenseDate
     return(
         <Col md={4}>
-            <Panel bsStyle='primary'>
+            <Panel bsStyle='info' className='add'>
+                <Panel.Heading>
+                    <Panel.Title>Редактировать</Panel.Title>
+                </Panel.Heading>
                 <Panel.Body>
                     <Form horizontal
                           onSubmit={e => {
                               e.preventDefault()
-                              if (!name.value.trim() || !sum.value.trim() || !date.value.trim()) {
+                              if (!expenseName.value.trim() || !expenseSum.value.trim() || !expenseDate.value.trim()) {
                                   return
                               }
 
-                              dispatch(editExpense(name.value, sum.value, date.value))
+                              dispatch(editExpense(expenseName.value, expenseSum.value, expenseDate.value, match.params.id))
                               history.push('/')
                           }}
                     >
-
-                        <Panel.Heading>
-                            <Panel.Title>Редактировать</Panel.Title>
-                        </Panel.Heading>
                         <FormGroup>
-                            <FormControl componentClass="textarea" type='textarea' inputRef={node => name = node}
-                                         placeholder=""/>
+                            <FormControl componentClass="textarea" type='textarea' inputRef={node => expenseName = node}
+                                         defaultValue={name}/>
                         </FormGroup>
 
                         <FormGroup>
-                            <FormControl type='text' inputRef={node => sum = node} placeholder=""/>
+                            <FormControl type='text' inputRef={node => expenseSum = node}  defaultValue={sum}/>
                         </FormGroup>
                         <FormGroup>
-                            <FormControl type="date" inputRef={node => date = node}/>
+                            <FormControl type="date" inputRef={node => expenseDate = node}  defaultValue={date}/>
                         </FormGroup>
                         <FormGroup>
                                 <Button

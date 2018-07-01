@@ -8,7 +8,10 @@ const AddExpense = ({ dispatch, history }) => {
     let name, sum, date
     return(
         <Col xs={6} md={4}>
-                <Panel bsStyle='primary'>
+                <Panel bsStyle='info' className='add'>
+                    <Panel.Heading>
+                        <Panel.Title>Внести расходы</Panel.Title>
+                    </Panel.Heading>
                     <Panel.Body>
                         <Form horizontal
                               onSubmit={(e) => {
@@ -24,10 +27,6 @@ const AddExpense = ({ dispatch, history }) => {
                                   date.value = '';
                               }}
                         >
-
-                            <Panel.Heading>
-                                <Panel.Title>Внести расходы</Panel.Title>
-                            </Panel.Heading>
                             <FormGroup>
                                 <FormControl componentClass="textarea"  type='textarea' inputRef={node => name = node} placeholder="Введите описание"/>
                             </FormGroup>

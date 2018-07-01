@@ -14,14 +14,14 @@ const DateFilter = ({filter, setFilter}) => {
                 </Panel.Heading>
                 <ListGroup>
                     <ListGroupItem>
-                        <label for="start">Начало</label>
+                        <label htmlFor="start">Начало</label>
                         <FormGroup>
                             <FormControl type="date" inputRef={node => start = node} className="date" />
                         </FormGroup>
                     </ListGroupItem>
 
                     <ListGroupItem>
-                        <label for="end">Конец</label>
+                        <label htmlFor="end">Конец</label>
                         <FormGroup>
                             <FormControl type="date" inputRef={node => end = node} className="date" />
                         </FormGroup>
