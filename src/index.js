@@ -4,6 +4,8 @@ import { createStore } from 'redux'
 import combineReducers from './Reducers/index'
 import Root from './Root'
 
+
+
 const store = createStore(combineReducers,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
@@ -11,7 +13,6 @@ const store = createStore(combineReducers,
         <Root store={store} />,
         document.getElementById('root')
     )
-
 
 
 

@@ -8,12 +8,13 @@ export const addExpense = (name, sum, date) => ({
     id: ++expenseId
 })
 
+let editExpenseId = 0;
 export const editExpense = (name, sum, date, id) => ({
     type: 'EDIT_EXPENSE',
     name,
     sum,
     date,
-    id
+    id: ++editExpenseId
 })
 
 export const removeExpense = (id) => ({

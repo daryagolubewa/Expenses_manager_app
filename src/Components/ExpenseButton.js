@@ -11,9 +11,6 @@ const ExpenseButton = ({addNewExpense}) => (
 
 export default ExpenseButton
 
-ExpenseButton.propTypes = {
-    ExpenseButton: PropTypes.func.isRequired
-}
 
 
 

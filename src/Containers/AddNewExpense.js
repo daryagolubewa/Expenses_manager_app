@@ -2,22 +2,23 @@ import React from 'react'
 import { connect } from "react-redux"
 import { addExpense } from "../Actions/Actions"
 import { FormControl, Button, FormGroup, Form, Col, Panel } from 'react-bootstrap'
-import { Route } from 'react-router-dom'
+import { Route, Redirect, BrowserRouter } from 'react-router-dom'
 
-const AddExpense = ({ dispatch }) => {
+const AddExpense = ({ dispatch, history }) => {
     let name, sum, date
     return(
         <Col xs={6} md={4}>
                 <Panel bsStyle='primary'>
                     <Panel.Body>
                         <Form horizontal
-                              onSubmit={e => {
+                              onSubmit={(e) => {
                                   e.preventDefault()
                                   if (!name.value.trim() || !sum.value.trim() || !date.value.trim()) {
                                       return
                                   }
 
                                   dispatch(addExpense(name.value, sum.value, date.value))
+                                  history.push('/')
                                   name.value = '';
                                   sum.value = '';
                                   date.value = '';
@@ -38,14 +39,9 @@ const AddExpense = ({ dispatch }) => {
                                     <FormControl type="date" inputRef={node => date = node} />
                             </FormGroup>
                             <FormGroup>
-                                <Route render={({ history}) => (
-                                    <Button
-                                        type='submit'
-                                        onClick={() => { history.push('/') }}
-                                    >
-                                        Отправить
-                                    </Button>
-                                )} />
+                               < Button type='submit'>
+                                Отправить
+                            </Button>
                             </FormGroup>
                         </Form>
                     </Panel.Body>

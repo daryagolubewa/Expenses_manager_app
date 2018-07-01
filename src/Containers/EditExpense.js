@@ -5,7 +5,7 @@ import { FormControl, Button, FormGroup, Form, Panel } from 'react-bootstrap'
 import { Col } from 'react-bootstrap'
 import {Route} from 'react-router-dom'
 
-const EditExpense = ({ dispatch }) => {
+const EditExpense = ({ dispatch, history }) => {
     let name, sum, date
     return(
         <Col md={4}>
@@ -19,6 +19,7 @@ const EditExpense = ({ dispatch }) => {
                               }
 
                               dispatch(editExpense(name.value, sum.value, date.value))
+                              history.push('/')
                               name.value = '';
                               sum.value = '';
                               date.value = '';
@@ -40,14 +41,10 @@ const EditExpense = ({ dispatch }) => {
                             <FormControl type="date" inputRef={node => date = node}/>
                         </FormGroup>
                         <FormGroup>
-                            <Route render={({ history}) => (
                                 <Button
-                                    type='submit'
-                                    onClick={() => { history.push('/') }}
-                                >
+                                    type='submit'>
                                     Сохранить
                                 </Button>
-                            )} />
                         </FormGroup>
                     </Form>
                 </Panel.Body>

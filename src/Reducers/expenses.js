@@ -23,8 +23,7 @@ switch (action.type){
         )
     case 'EDIT_EXPENSE':
         let newDateObject = new Date(action.date);
-        return {
-            state: state.map(
+        return state.map(
                 expense => expense.id === action.id ?      {
                         name: action.name,
                         sum: parseInt(action.sum),
@@ -33,7 +32,7 @@ switch (action.type){
                     }
                     : expense
             )
-        }
+
 }
 return state
 }
