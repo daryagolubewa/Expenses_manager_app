@@ -2,9 +2,7 @@ import { connect } from 'react-redux'
 import ExpensesList from '../Components/ExpensesList'
 import { SortingOptions } from '../Actions/Actions'
 import { removeExpense } from '../Actions/Actions'
-import expenses from "../Reducers/expenses"
-import dateFilter from '../Reducers/filter'
-import { setFilter } from '../Actions/Actions'
+import Filter from '../Containers/Filter'
 
 
 const getChosenExpenses = (expenses, sorting) => {
@@ -17,14 +15,6 @@ const getChosenExpenses = (expenses, sorting) => {
             return expenses.slice().sort(
                 (a, b) => (a.sum - b.sum)
             );
-    }
-}
-
-const Filter = (expenses, filter) => {
-    if (filter) {
-        return expenses.filter(expense => expense.date >= filter.start && expense.date <= filter.end)
-    } else {
-        return expenses
     }
 }
 
