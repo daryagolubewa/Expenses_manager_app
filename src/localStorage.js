@@ -1,4 +1,5 @@
 import dateFilter from './Components/DateFilter'
+import { SortingOptions } from './Actions/Actions'
 
 export const loadState = () => {
     try {
@@ -16,7 +17,8 @@ export const saveState = state => {
     try {
         let currentState = Object.assign({},state);
         currentState.dateFilter = null
-        const serializedState = JSON.stringify(state);
+        currentState.sortings =  SortingOptions.DATE;
+        const serializedState = JSON.stringify(currentState);
         localStorage.setItem('state', serializedState)
     } catch (err) {
         //Ignore write errors
