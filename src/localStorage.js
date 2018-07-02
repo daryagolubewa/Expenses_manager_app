@@ -1,3 +1,4 @@
+import dateFilter from './Components/DateFilter'
 
 export const loadState = () => {
     try {
@@ -13,9 +14,12 @@ export const loadState = () => {
 
 export const saveState = state => {
     try {
+        let currentState = Object.assign({},state);
+        currentState.dateFilter = null
         const serializedState = JSON.stringify(state);
         localStorage.setItem('state', serializedState)
     } catch (err) {
         //Ignore write errors
     }
 }
+
