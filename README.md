@@ -19,3 +19,5 @@ The app was created with usage of React, Redux, React Router, Bootstrap.
 Каждая трата в списке имеет две кнопки: для удаления её и редактирования.
 
 Приложение было написано с помощью React, Redux, React Router, Bootstrap.
+
+![alt text](https://pp.userapi.com/c852128/v852128750/6d87b/oihPIMbjt2o.jpg)
