@@ -20,4 +20,4 @@ The app was created with usage of React, Redux, React Router, Bootstrap.
 
 Приложение было написано с помощью React, Redux, React Router, Bootstrap.
 
-![alt text](https://pp.userapi.com/c852128/v852128750/6d87b/oihPIMbjt2o.jpg)
+![alt text](https://pp.userapi.com/c849432/v849432460/e3a15/r4OJn2k-viU.jpg)
